@@ -1,0 +1,151 @@
+:root {
+  --dark-gray: #808080;
+  --light-gray: #ececec;
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+body {
+  font: 1rem;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "lato", sans-serif;
+}
+
+/* global ----------------*/
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: rgb(165, 72, 49);
+}
+.grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 3.5rem 1fr 4rem;
+}
+.header {
+  grid-area: header;
+  color: white;
+  background-color: #203040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem;
+}
+.brand a {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.header-links a {
+  color: white;
+  text-decoration: none;
+  color: white;
+  margin-right: 1rem;
+}
+.header-links a:hover {
+  color: var(--dark-gray);
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+  color: rgb(148, 146, 146);
+  background-color: #203040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+/* ----sidebar-------- */
+.brand button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.9rem;
+  padding: 0.6rem;
+  padding-bottom: 0.3rem;
+  cursor: pointer;
+}
+.sidebar {
+  transform: translateX(-18rem);
+  width: 18rem;
+  height: 100%;
+  position: fixed;
+  background-color: var(--light-gray);
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+.sidebar-close-button {
+  border-radius: 50%;
+  border: 0.1rem solid var(--dark-gray);
+  width: 1.5rem;
+  height: 1.5rem;
+  padding-top: 0rem;
+  font-size: 1rem;
+  right: 0.6rem;
+  top: 1.3rem;
+  position: absolute;
+  cursor: pointer;
+  color: rgb(139, 136, 136);
+}
+.sidebar h3 {
+  padding-bottom: 1rem;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid rgb(199, 198, 198);
+  width: 15rem;
+  font-size: 0.9rem;
+}
+/* home screen ================================================*/
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products li {
+  margin: 0.8rem;
+  height: 28rem;
+  flex: 0 1 10rem;
+  padding: 0;
+  border-bottom: 0.1rem rgb(199, 199, 199) solid;
+  list-style: none;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.product-brand {
+  color: var(--dark-gray);
+}
+.product-image {
+  max-width: 20rem;
+  max-height: 20rem;
+}
+.product-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.product-rating {
+  margin: 0.5rem;
+}
